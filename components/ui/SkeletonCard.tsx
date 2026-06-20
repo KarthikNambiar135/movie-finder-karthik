@@ -18,12 +18,7 @@ export function SkeletonGrid() {
     <div
       aria-label="Loading movies…"
       aria-busy="true"
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
-        gap: "16px",
-      }}
-      className="movie-grid"
+      className="movie-grid-premium"
     >
       {Array.from({ length: 12 }).map((_, i) => (
         <SkeletonCard key={i} />

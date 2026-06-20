@@ -47,11 +47,6 @@ export function MovieGrid({ movies, onMovieClick }: MovieGridProps) {
       viewport={{ once: true, margin: "-50px" }}
       role="list"
       aria-label="Movie results"
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
-        gap: "24px",
-      }}
       className="movie-grid-premium"
     >
       {movies.map((movie, index) => (
@@ -63,18 +58,6 @@ export function MovieGrid({ movies, onMovieClick }: MovieGridProps) {
           />
         </motion.div>
       ))}
-
-      <style>{`
-        .movie-grid-premium {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        @media (min-width: 640px) {
-          .movie-grid-premium { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (min-width: 1024px) {
-          .movie-grid-premium { grid-template-columns: repeat(4, 1fr); gap: 32px; }
-        }
-      `}</style>
     </motion.div>
   );
 }
